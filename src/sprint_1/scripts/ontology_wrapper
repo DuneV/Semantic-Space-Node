@@ -1,0 +1,13 @@
+#!/home/krita/mujoco-env/bin/python3
+
+import sys
+import os
+
+venv_site_packages = "/home/krita/mujoco-env/lib/python3.12/site-packages"
+if venv_site_packages not in sys.path:
+    sys.path.insert(0, venv_site_packages)
+
+from sprint_1.ontology_graph import main
+
+if __name__ == '__main__':
+    main()

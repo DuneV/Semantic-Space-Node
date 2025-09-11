@@ -1,0 +1,22 @@
+## How run this code
+---
+
+Corremos esto para activar el alimentador de stanza y publicar el formato que requerimos.
+
+```[bash]
+ros2 run sprint_1 yolo2graph_wrapper
+```
+
+Despues el launcher
+
+```
+ros2 launch sprint_1 test.launch.py
+```
+
+```[bash]
+ros2 run sprint_1 ontology_wrapper
+```
+
+```[bash]
+source install/setup.bash
+```

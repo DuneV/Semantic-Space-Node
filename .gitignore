@@ -1,0 +1,48 @@
+# Archivos y carpetas generados por ROS 2
+build/
+install/
+log/
+colcon.log
+colcon_command.log
+
+# Archivos de caché y configuración de herramientas
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Entornos virtuales y dependencias de Python
+.env
+.venv/
+venv/
+env/
+*.egg-info/
+__pycache__/
+*.pyc
+pip-wheel-metadata/
+
+# Paquetes de Python descargados
+*.whl
+*.tar.gz
+
+# Archivos de datos y logs grandes
+*.bag
+*.bag.active
+*.mcap
+*.db3
+*.log
+
+# Archivos de configuración de editores (opcional, si no quieres compartirlos)
+*.sublime-project
+*.sublime-workspace
+
+# Archivos temporales
+*.bak
+
+# Si usas Docker, ignora los contextos y archivos de imagen
+.dockerignore
+Dockerfile*
+docker-compose*.yml
+
+.vscode
