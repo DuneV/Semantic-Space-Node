@@ -1,9 +1,9 @@
-#!/home/krita/mujoco-env/bin/python3
+#!/home/krita/mujoco_venv/mujoco-env/bin/python3
 
 import sys
 import os
 
-venv_site_packages = "/home/krita/mujoco-env/lib/python3.12/site-packages"
+venv_site_packages = "/home/krita/mujoco_venv/mujoco-env/lib/python3.12/site-packages"
 if venv_site_packages not in sys.path:
     sys.path.insert(0, venv_site_packages)
 

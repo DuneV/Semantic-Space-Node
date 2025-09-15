@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import String, Bool
 import networkx as nx
 from typing import List, Dict, Tuple, Any
 import time
@@ -14,6 +14,11 @@ class OntologyNode(Node):
         self.first_message_received = False 
         self.graph = self.build_ontology()
         self.concept_to_classes_cache = {}
+        self.fail = self.create_publisher(
+            Bool,
+            '/graph/state',
+            10
+        )
         self.subscription = self.create_subscription(
             String,
             '/processed_detections',
@@ -247,6 +252,12 @@ class OntologyNode(Node):
 
             intent = self.parse_intent(self.read_task(path='src/sprint_1/data/json_embedding/last_analysis.json'))
             plan = self.plan_move_mouse(intent)
+            
+            if not plan['feasible']:
+                msg_out = Bool()
+                msg_out = False
+                self.fail.publish(msg_out)
+            
             self.get_logger().info(f"Plan: {plan}")
         except Exception as e:
             self.get_logger().error(f"Error processing message: {e}")

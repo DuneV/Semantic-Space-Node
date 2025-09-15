@@ -1,0 +1,36 @@
+{
+    "queue_content": [
+        {
+            "lemma": "move",
+            "pos": "VERB"
+        },
+        {
+            "lemma": "mouse",
+            "pos": "NOUN"
+        },
+        {
+            "lemma": "on",
+            "pos": "ADP"
+        },
+        {
+            "lemma": "keyboard",
+            "pos": "NOUN"
+        }
+    ],
+    "category_counts": {
+        "NOUN": 2,
+        "VERB": 1,
+        "ADP": 1
+    },
+    "model_match": 0,
+    "nouns": [
+        "mouse",
+        "keyboard"
+    ],
+    "verbs": [
+        "move"
+    ],
+    "adps": [
+        "on"
+    ]
+}

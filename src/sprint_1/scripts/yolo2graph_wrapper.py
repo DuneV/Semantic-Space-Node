@@ -1,4 +1,4 @@
-#!/home/krita/mujoco-env/bin/python3
+#!/home/krita/mujoco_venv/mujoco-env/bin/python3
 
 import sys
 import os
